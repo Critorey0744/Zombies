@@ -58,4 +58,25 @@ import java.util.ArrayList;
             }
             return d.get(m);
         }
+        public static void Intercambio (ubicaciones punto1, ubicaciones punto2){
+            punto1.setNombreUbicacion(punto2.getNombreUbicacion());
+            punto1.setDistancia(punto2.getDistancia());
+            punto1.setZombies(punto2.getZombies());
+        }
+        public static ArrayList<ubicaciones> OrdenPoblac(ArrayList<ubicaciones> h){
+            int menorPoscicion;
+            ubicaciones temporal;
+            for(int b = 0; b<h.size(); b++){
+                menorPoscicion = b;
+                for(int m = b+1; m<h.size(); m++){
+                    if(h.get(m).getDistancia() < h.get(menorPoscicion).getDistancia()){
+                        menorPoscicion= m;
+                    }
+                }
+                temporal = h.get(b);
+                h.get(b).Intercambio(h.get(b), h.get(menorPoscicion));
+                h.get(menorPoscicion).Intercambio(h.get(menorPoscicion), temporal);
+            }
+            return h;
+        }
     }

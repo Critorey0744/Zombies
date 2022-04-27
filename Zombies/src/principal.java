@@ -151,6 +151,12 @@ public class principal {
                     System.out.println("La ubicación más segura es:"+ ubicaciones.mInformacion(com.mycompany.principal.ubicaciones.seguridad(ubicacion)));
                     continue;
                 }
+                case 10: {
+                    for(int capacidad = 0; capacidad<ubicacion.size(); capacidad++){
+                        System.out.println(ubicaciones.mInformacion(ubicaciones.OrdenPoblac(ubicacion).get(capacidad)));
+                }
+                continue;
+                }
                 case 11:{
                     String[] frases = new String[5];
                     frases[0]= "¡No quiero ser un superviviente en un apocalipsis zombie! ¿Habéis visto que agobiados van? Yo zombie y a dar vueltitas por ahí. A mi ritmo. ";
@@ -174,6 +180,7 @@ public class principal {
                         zombie.clear();
                         System.out.println("Hemos borrado todo, huye soldado, y reconstruye una nueva Alexandria mas fuerte!!");
                         System.out.println("Fue un placer");
+                        i++;
                         continue;
                     }
                     else {
