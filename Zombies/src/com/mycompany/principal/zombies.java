@@ -1,4 +1,5 @@
 package com.mycompany.principal;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -48,5 +49,10 @@ public class zombies {
 
     public void setSangre(String sang) {
         this.sangre = sang;
+    }
+    public String toString() {
+        SimpleDateFormat sdf =new SimpleDateFormat("dd/MM/yyyy");
+        String fechaFormateada = sdf.format(fechaNacimiento);
+        return "Zombies{" + "nombre=" + nombre + ", salud=" + salud + ", fecha de Nacimiento=" + fechaFormateada + ", sangre=" + sangre + '}';
     }
 }

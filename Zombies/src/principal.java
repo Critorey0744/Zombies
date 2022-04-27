@@ -41,10 +41,12 @@ public class principal {
             switch (respuesta) {
                 case 0: {
                     System.out.println("Ha finalizado el programa");
+                    i++;
                     break;
                 }
                 case 1: {
                     System.out.println("Ingresa la información del zombie");
+                    contadorZombies++;
                     System.out.println("Nombre:");
                     String nombre = entrada.next();
                     System.out.println("Salud:");
@@ -64,7 +66,7 @@ public class principal {
                     zombiee.setFechaNacimiento(nacimiento);
                     zombiee.setSangre(sangre);
                     zombie.add(new zombies(nombre, salud, nacimiento, sangre));
-                    contadorZombies++;
+
                     continue;
                 }
                 case 2: {
@@ -78,22 +80,25 @@ public class principal {
                         System.out.println("Zombie "+j+" : "+zombie.get(j).toString());
                         }
                     }
+                    /*for(int k= 0; k<zombie.size(); k++){
+                        System.out.println(zombie.get(k).toString());
+                    }*/
                     continue;
                 }
                 case 3: {
-                /*    System.out.println("La cantidad de zombies registrados son: ");
-                    int total = zombies.Zombie.size();
+                   System.out.println("La cantidad de zombies registrados son: ");
+                    int total = zombie.size();
                     System.out.println(total);
-                }*/
-                    if(contadorZombies == 1){
+
+                  /*   if(contadorZombies == 1){
                         System.out.println("Hay registrado un zombie");
                     }
-                    if(contadorZombies == 0){
+                     else if(contadorZombies == 0){
                         System.out.println("No se han registrado zombies!");
                     }
-                    if(contadorZombies>1){
+                    else if(contadorZombies>1){
                         System.out.println("Se han creado "+contadorZombies+ " zombies");
-                    }
+                    }*/
                     continue;
                 }
                 case 4: {
